@@ -1,0 +1,162 @@
+.verify-step { width: 100%; }
+
+.verify-art {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 55px;
+  margin-bottom: 20px;
+}
+
+.va-main { font-size: 2.8rem; animation: float 5s ease-in-out 0s infinite; }
+.va-sp1  { position: absolute; top: 0;  left: 55%; font-size: 1rem; animation: starTwinkle 2.5s ease infinite 0.3s; }
+.va-sp2  { position: absolute; top: 10px; left: 44%; font-size: 0.9rem; animation: starTwinkle 3s ease infinite 1s; }
+.va-sp3  { position: absolute; top: 5px; left: 60%; font-size: 0.8rem; animation: starTwinkle 2s ease infinite 0.7s; }
+
+.verify-heading {
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 8px;
+}
+
+.verify-desc {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+/* Counter */
+.verify-counter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.65);
+  border-radius: 50px;
+  border: 2px solid rgba(107, 90, 200, 0.15);
+  width: fit-content;
+}
+
+.counter-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.counter-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(107, 90, 200, 0.3);
+  transition: var(--transition);
+  display: block;
+}
+
+.counter-dot.filled {
+  background: linear-gradient(135deg, #6C5CE7, #74B9FF);
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.4);
+  animation: popBounce 0.35s ease both;
+}
+
+.counter-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--dark-navy);
+}
+
+/* Sticker grid */
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.sticker-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 10px 14px;
+  border-radius: 20px;
+  border: 2px solid rgba(107, 90, 200, 0.12);
+  background: rgba(255,255,255,0.65);
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+  animation: fadeSlideUp 0.4s ease both;
+}
+
+.sticker-btn:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.04);
+  border-color: rgba(108, 92, 231, 0.3);
+  box-shadow: var(--shadow-card);
+  background: var(--lavender);
+}
+
+.sticker-btn.selected {
+  background: linear-gradient(135deg, #E9E5FF, #DCEEFF);
+  border-color: var(--purple-mid);
+  box-shadow: 0 4px 18px rgba(108, 92, 231, 0.3);
+  transform: scale(1.04);
+}
+
+.sticker-btn.selected .sticker-emoji {
+  animation: wiggle 0.5s ease;
+}
+
+.sticker-btn.disabled-sticker {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sticker-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.sticker-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dark-navy);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.sticker-check {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: linear-gradient(135deg, #6C5CE7, #74B9FF);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popBounce 0.35s ease both;
+}
+
+.verify-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 540px) {
+  .sticker-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 380px) {
+  .sticker-grid { grid-template-columns: repeat(2, 1fr); }
+}
+

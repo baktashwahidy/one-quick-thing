@@ -1,0 +1,60 @@
+.floating-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Gradient blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #c8bfff 0%, transparent 70%);
+  top: -120px;
+  left: -120px;
+  animation: float 12s ease-in-out 0s infinite;
+}
+
+.blob-2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #aee8ff 0%, transparent 70%);
+  bottom: -100px;
+  right: -80px;
+  animation: floatReverse 14s ease-in-out 2s infinite;
+}
+
+.blob-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #b8f5d8 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 10s ease-in-out 1s infinite;
+}
+
+/* Floating emoji decorations */
+.float-deco {
+  position: fixed;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .float-deco { opacity: 0 !important; }
+  .blob { opacity: 0.3; }
+}
+

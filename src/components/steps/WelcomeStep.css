@@ -1,0 +1,189 @@
+.welcome-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* Hero cluster above card */
+.welcome-hero {
+  position: relative;
+  width: 180px;
+  height: 100px;
+  margin-bottom: -20px;
+  z-index: 2;
+}
+
+.hero-cat {
+  position: absolute;
+  font-size: 3.5rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 5s ease-in-out 0s infinite;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.12));
+}
+
+.hero-coffee {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 10px;
+  right: 10px;
+  animation: float 7s ease-in-out 1s infinite;
+}
+
+.hero-stars {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  font-size: 1.1rem;
+  animation: float 4s ease-in-out 0.5s infinite;
+}
+
+.hero-cloud {
+  position: absolute;
+  font-size: 1.8rem;
+  top: 5px;
+  left: 0;
+  animation: floatReverse 8s ease-in-out 2s infinite;
+  opacity: 0.75;
+}
+
+/* Card content */
+.welcome-card {
+  text-align: center;
+  padding-top: 56px;
+}
+
+.welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--lavender), var(--sky-blue));
+  color: var(--purple-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 1.5px solid rgba(108, 92, 231, 0.2);
+}
+
+.welcome-heading {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  color: var(--dark-navy);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #26334A 0%, #6C5CE7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dot {
+  color: var(--purple-mid);
+  -webkit-text-fill-color: var(--purple-mid);
+}
+
+.welcome-subtitle {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 500;
+  color: var(--dark-navy);
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.welcome-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.welcome-deco-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  margin-bottom: 36px;
+  animation: float 6s ease-in-out 1s infinite;
+}
+
+.welcome-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  min-height: 100px;
+  position: relative;
+}
+
+.welcome-accept {
+  font-size: 1.1rem;
+  padding: 16px 44px;
+  animation: pulse-soft 3s ease infinite;
+}
+
+.decline-btn {
+  position: relative;
+  user-select: none;
+}
+
+.shy-message {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--purple-deep);
+  font-weight: 500;
+  animation: fadeSlideUp 0.3s ease both;
+  background: var(--lavender);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+/* Decline modal */
+.decline-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(38, 51, 74, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeSlideUp 0.3s ease both;
+}
+
+.decline-modal-box {
+  background: white;
+  border-radius: var(--radius-card);
+  padding: 48px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-hover);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: bounceIn 0.5s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.decline-modal-box h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.decline-modal-box p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+

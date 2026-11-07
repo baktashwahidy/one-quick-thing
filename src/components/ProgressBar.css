@@ -1,0 +1,110 @@
+.progress-nav {
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 24px;
+  animation: fadeSlideUp 0.4s ease both;
+}
+
+.progress-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.step-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(107, 90, 200, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 2;
+}
+
+.progress-step.active .step-dot {
+  background: linear-gradient(135deg, #6C5CE7, #74B9FF);
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(108, 92, 231, 0.4);
+  animation: pulse-soft 2s ease infinite;
+}
+
+.progress-step.done .step-dot {
+  background: linear-gradient(135deg, #55D8A0, #74B9FF);
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(85, 216, 160, 0.3);
+}
+
+.check {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.step-icon { font-size: 1rem; }
+
+.step-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.progress-step.active .step-label { color: var(--purple-deep); font-weight: 600; }
+.progress-step.done  .step-label { color: var(--mint-mid); }
+
+/* connector line between dots */
+.connector {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background: rgba(107, 90, 200, 0.15);
+  z-index: 1;
+  transition: background 0.5s;
+}
+
+.connector.done { background: linear-gradient(90deg, #55D8A0, #74B9FF); }
+
+/* thin bar below */
+.progress-bar-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(107, 90, 200, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6C5CE7, #74B9FF, #55D8A0);
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 480px) {
+  .step-label { display: none; }
+  .step-dot { width: 32px; height: 32px; font-size: 0.9rem; }
+  .connector { top: 16px; }
+}
+
