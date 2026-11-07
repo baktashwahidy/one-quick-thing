@@ -1,29 +1,5 @@
-import { Palette, Lightbulb, Monitor, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import './RequestStep.css'
-
-const FEATURES = [
-  {
-    icon: <Monitor size={22} />,
-    emoji: '🖥️',
-    title: 'Website Design',
-    desc: 'Visual layout, color palette, and overall aesthetics.',
-    color: 'lavender',
-  },
-  {
-    icon: <Lightbulb size={22} />,
-    emoji: '💡',
-    title: 'Creative Ideas',
-    desc: 'Fresh perspectives and innovative suggestions.',
-    color: 'sky',
-  },
-  {
-    icon: <Palette size={22} />,
-    emoji: '🎨',
-    title: 'User Experience',
-    desc: 'Navigation flow, usability, and interaction design.',
-    color: 'mint',
-  },
-]
 
 export default function RequestStep({ onNext }) {
   return (
@@ -54,25 +30,6 @@ export default function RequestStep({ onNext }) {
           help me improve it. 🌟
         </p>
 
-        {/* Feature cards */}
-        <div className="feature-grid">
-          {FEATURES.map((f, i) => (
-            <div
-              key={i}
-              className={`feature-card feature-${f.color}`}
-              style={{ animationDelay: `${i * 0.12}s` }}
-            >
-              <div className="feature-icon-wrap">
-                <span className="feature-emoji">{f.emoji}</span>
-              </div>
-              <div className="feature-text">
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
         <div className="request-footer">
           <div className="request-note">
             <span>🕐</span>
@@ -87,4 +44,3 @@ export default function RequestStep({ onNext }) {
     </div>
   )
 }
-

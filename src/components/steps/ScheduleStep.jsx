@@ -6,6 +6,7 @@ import './ScheduleStep.css'
 const TIMEZONES = [
   'Asia/Kabul',
   'Asia/Tehran',
+  'Asia/Baku',
   'Asia/Dubai',
   'Asia/Karachi',
   'Asia/Kolkata',
@@ -267,4 +268,3 @@ export default function ScheduleStep({ selections, onUpdate, onNext }) {
     </div>
   )
 }
-
