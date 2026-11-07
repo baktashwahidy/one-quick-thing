@@ -1,7 +1,7 @@
 import { useState, useCallback, useRef } from 'react'
 
 const GAS_ENDPOINT =
-  'https://script.google.com/macros/s/AKfycbxPLEy9GKZ_TCjNiwIy2cJRBXMiaJf-vJUuBRiRuvSEZ6okq-DGMhBClBrgjh0MGGnY/exec'
+  'https://script.google.com/macros/s/AKfycbz6xQbTql-TWPBxoaELIelsQOJxVNddpJk9WqBebxiUwnWv0FfZree3Zg_JVMDA-4yE/exec'
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const MONTHS = [
