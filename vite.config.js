@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/one-quick-thing/',
+  base: process.env.VERCEL ? '/' : '/one-quick-thing/',
 })
